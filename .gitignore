@@ -1,0 +1,4 @@
+.DS_Store
+.eslintrc.json
+.prettierrc.json
+node_modules
