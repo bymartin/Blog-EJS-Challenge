@@ -17,19 +17,23 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('home', {startingContent: homeStartingContent});
+    res.render('home', { startingContent: homeStartingContent });
 });
 
 app.get('/about', (req, res) => {
-    res.render('about', {aboutContent});
+    res.render('about', { aboutContent });
 });
 
 app.get('/contact', (req, res) => {
-    res.render('contact', {contactContent});
+    res.render('contact', { contactContent });
 });
 
 app.get('/compose', (req, res) => {
     res.render('compose');
+});
+
+app.post('/compose', (req, res) => {
+    console.log(req.body.postName);
 });
 
 app.listen(3000, () => {
