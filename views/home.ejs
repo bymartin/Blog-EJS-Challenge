@@ -5,7 +5,8 @@
 
 <% posts.forEach(function(post) { %>
 <h2><%= post.postTitle %></h2>
-<p><%= post.postContent %></p>
+<!-- Truncate content to 100 characters followed by ... -->
+<p><%= post.postContent.substring(0,100) + " ..." %></p>
 <% }); %> 
 
 <%- include('partials/footer'); -%>
